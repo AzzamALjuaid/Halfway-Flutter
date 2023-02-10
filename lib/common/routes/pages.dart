@@ -8,7 +8,9 @@ import 'package:firebase_chat/pages/sign_in/index.dart';
 import 'package:firebase_chat/pages/welcome/index.dart';
 import 'package:firebase_chat/pages/application/index.dart';
 import 'package:firebase_chat/pages/contact/index.dart';
-import 'package:firebase_chat/pages/chat/index.dart';
+// import 'package:firebase_chat/pages/chat/index.dart';
+import '../../pages/message/chat/bindings.dart';
+import '../../pages/message/chat/view.dart';
 import 'routes.dart';
 
 class AppPages {

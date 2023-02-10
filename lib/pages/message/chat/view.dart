@@ -2,6 +2,7 @@
 // import 'dart:js';
 
 import 'package:firebase_chat/common/values/colors.dart';
+import 'package:firebase_chat/pages/message/chat/widgets/chat_list.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -115,18 +116,73 @@ class ChatPage extends GetView<ChatController> {
   @override
   Widget build(BuildContext context) {
 
-
-
-
     return Scaffold(
       appBar: _buildAppBar(),
-        body: Center(
-      child: Column(
-        children: [
+        body: SafeArea(
+          child: ConstrainedBox(
+            constraints: BoxConstraints.expand(),
+            child: Stack(
+              children: [
+                ChatList(),
+                Positioned(
+                  bottom:0.h ,
+                  height: 50.h,
+                  child: Container(
+                   width: 360.w,
+                   height: 50.h,
+                   color: AppColors.primaryBackground,
+                   child: Row(
+                     mainAxisAlignment: MainAxisAlignment.start,
+                     children: [
+                       SizedBox(
+                         width: 217.w,
+                         height: 50.h,
+                         child: TextField(
+                           keyboardType: TextInputType.multiline,
+                           maxLines: 3,
+                           controller: controller.textController,
+                           autofocus: false,
+                           focusNode: controller.contentNode,
+                           decoration: const InputDecoration(
+                             hintText: "Send messages..."
+                           ),
+                         ),
+                       ),
+                       Container(
+                         height: 30.h,
+                         width: 30.w,
+                         margin: EdgeInsets.only(left: 5.w),
+                         child: GestureDetector(
+                           child: Icon(
+                             Icons.photo_outlined,
+                             size: 35.w,
+                             color: Colors.black,
+                           ),
+                           onTap: (){
 
-        ],
-      ),
-    )
+                           },
+                         ),
+                       ),
+                       Container(
+                         margin: EdgeInsets.only(left: 10.w,top: 5.h),
+                         width: 65.w,
+                         height: 35.w,
+                         child: ElevatedButton(
+                           child: const Text("Send"),
+                           onPressed: (){
+                             controller.sendMessage();
+                           },
+                         ),
+                       )
+
+                     ],
+                   ),
+                  ),
+                )
+              ],
+            ),
+          ),
+        )
     );
   }
 }
