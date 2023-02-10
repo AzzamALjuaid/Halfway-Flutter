@@ -4,8 +4,11 @@ import 'package:firebase_chat/common/middlewares/middlewares.dart';
 
 import 'package:get/get.dart';
 
-import '../../pages/welcome/bindings.dart';
-import '../../pages/welcome/view.dart';
+import 'package:firebase_chat/pages/welcome/index.dart';
+import 'package:firebase_chat/pages/sign_in/index.dart';
+import 'package:firebase_chat/pages/application/index.dart';
+import 'package:firebase_chat/pages/contact/index.dart';
+
 import 'routes.dart';
 
 class AppPages {
@@ -20,11 +23,13 @@ class AppPages {
       name: AppRoutes.INITIAL,
       page: () => const WelcomePage(),
       binding: WelcomeBinding(),
+      middlewares: [
+        RouteWelcomeMiddleware(priority: 1)
+      ]
     ),
-  /*
     GetPage(
       name: AppRoutes.SIGN_IN,
-      page: () => SignInPage(),
+      page: () => const SignInPage(),
       binding: SignInBinding(),
     ),
 
@@ -34,14 +39,17 @@ class AppPages {
       page: () => ApplicationPage(),
       binding: ApplicationBinding(),
       middlewares: [
-        RouteAuthMiddleware(priority: 1),
+        //RouteAuthMiddleware(priority: 1),
       ],
     ),
 
+
     // 最新路由
     // 首页
-    GetPage(name: AppRoutes.Contact, page: () => ContactPage(), binding: ContactBinding()),
-    //消息
+    GetPage(name: AppRoutes.Contact,
+        page: () => ContactPage(),
+        binding: ContactBinding()),
+    /* //消息
     GetPage(name: AppRoutes.Message, page: () => MessagePage(), binding: MessageBinding()),
     //我的
     GetPage(name: AppRoutes.Me, page: () => MePage(), binding: MeBinding()),
