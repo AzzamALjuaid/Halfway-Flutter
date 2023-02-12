@@ -49,7 +49,7 @@ class SignInPage extends GetView<SignInController> {
                 top: 15.h, bottom: 15.h
               ),
               child: Text(
-              "lets Chat",
+              "Halfway",
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: AppColors.thirdElement,
