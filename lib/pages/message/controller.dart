@@ -1,9 +1,12 @@
+import 'dart:html';
+
 import 'package:firebase_chat/common/entities/entities.dart';
 import 'package:firebase_chat/common/store/store.dart';
 import 'package:firebase_chat/pages/message/state.dart';
 import 'package:get/get.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
+import 'package:location/location.dart';
 
 class MessageController extends GetxController{
   MessageController();
@@ -55,5 +58,16 @@ class MessageController extends GetxController{
       state.msgList.assignAll(to_message.docs);
     }
 
+  }
+  
+  getUserLocation() async {
+    try{
+      final loation = await Location().getLocation();
+      String address = "${loation.latitude}, ${loation.longitude}";
+      String url = "https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=AIzaSyAmVUEuILZQceDfbxDJmkuLY2p0Pe8dwlA";
+
+    }catch(e){
+      print("Getting error $e");
+    }
   }
 }
