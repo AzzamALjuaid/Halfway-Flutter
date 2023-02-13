@@ -1,4 +1,5 @@
 
+import 'package:firebase_chat/pages/message/photoview/index.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_chat/common/middlewares/middlewares.dart';
 
@@ -57,8 +58,9 @@ class AppPages {
     GetPage(name: AppRoutes.Me, page: () => MePage(), binding: MeBinding()),
     */
     GetPage(name: AppRoutes.Chat, page: () => ChatPage(), binding: ChatBinding()),
-/*
-    GetPage(name: AppRoutes.Photoimgview, page: () => PhotoImgViewPage(), binding: PhotoImgViewBinding()),*/
+
+    GetPage(name: AppRoutes.Photoimgview,
+  page: () => PhotoImageView(), binding: PhotoImageViewBinding()),
   ];
 
 

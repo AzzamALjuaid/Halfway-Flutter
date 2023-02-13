@@ -1,10 +1,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.firebase_chat">
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
    <application
         android:label="firebase_chat"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+       <meta-data android:name="AIzaSyAmVUEuILZQceDfbxDJmkuLY2p0Pe8dwlA"
+           android:value="YOUR KEY HERE"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"

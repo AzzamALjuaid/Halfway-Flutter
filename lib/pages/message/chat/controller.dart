@@ -153,7 +153,26 @@ class ChatController extends GetxController {
     },
     onError: (error)=>print("Listen failed: $error")
     );
+
+
+    getLocation();
   }
+
+  getLocation() async {
+    try{
+      var user_loaction = await db.collection("users").where("id", isEqualTo: state.to_uid.value)
+          .withConverter(
+          fromFirestore: UserData.fromFirestore,
+          toFirestore: (UserData userdata, options)=>userdata.toFirestore()).get();
+      var location = user_loaction.docs.first.data().location;
+      if(location!=null){
+      state.to_location.value=location??"unknown";
+      }
+    }catch(e){
+      print("we have error $e");
+    }
+  }
+
 
   @override
   void dispose(){

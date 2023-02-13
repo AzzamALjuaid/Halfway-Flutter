@@ -1,6 +1,4 @@
 
-// import 'dart:js';
-
 import 'package:firebase_chat/common/values/colors.dart';
 import 'package:firebase_chat/pages/message/chat/widgets/chat_list.dart';
 import 'package:flutter/cupertino.dart';
@@ -89,16 +87,18 @@ class ChatPage extends GetView<ChatController> {
                               fontSize: 18.sp
                             ),
                           ),
-                          Text(
-                            "unknown location",
+                          Obx(
+                          ()=>Text(
+                            controller.state.to_location.value,
                             overflow: TextOverflow.clip,
                             maxLines: 1,
                             style: TextStyle(
                                 fontFamily: 'Avenger',
                                 fontWeight: FontWeight.normal,
                                 color: AppColors.primaryBackground,
-                                fontSize: 14.sp
+                                fontSize: 12.sp
                             ),
+                          )
                           )
                         ],
                       ),
