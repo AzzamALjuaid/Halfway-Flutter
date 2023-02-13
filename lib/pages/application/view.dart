@@ -1,15 +1,9 @@
 import 'package:firebase_chat/common/values/colors.dart';
-import 'package:firebase_chat/common/values/shadows.dart';
-import 'package:firebase_chat/common/widgets/button.dart';
 import 'package:firebase_chat/pages/contact/index.dart';
 import 'package:firebase_chat/pages/message/view.dart';
-import 'package:firebase_chat/pages/sign_in/controller.dart';
-import 'package:firebase_chat/pages/welcome/controller.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:firebase_chat/pages/profile/index.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:dots_indicator/dots_indicator.dart';
 
 import 'controller.dart';
 
@@ -26,7 +20,7 @@ class ApplicationPage extends GetView<ApplicationController> {
         children: [
           MessagePage(),
           ContactPage(),
-          Center(child: Text('profile'))
+          ProfilePage(),
         ],
       );
     }

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_chat/common/middlewares/middlewares.dart';
 
 import 'package:get/get.dart';
+import 'package:firebase_chat/pages/profile//index.dart';
 
 import 'package:firebase_chat/pages/sign_in/index.dart';
 import 'package:firebase_chat/pages/welcome/index.dart';
@@ -50,17 +51,22 @@ class AppPages {
     // 最新路由
     // 首页
     GetPage(name: AppRoutes.Contact,
-        page: () => ContactPage(),
+        page: () => const ContactPage(),
         binding: ContactBinding()),
   /*
     GetPage(name: AppRoutes.Message, page: () => MessagePage(), binding: MessageBinding()),
+*/
+    GetPage(name: AppRoutes.Me,
+        page: () => const ProfilePage(),
+        binding: ProfileBinding()),
 
-    GetPage(name: AppRoutes.Me, page: () => MePage(), binding: MeBinding()),
-    */
-    GetPage(name: AppRoutes.Chat, page: () => ChatPage(), binding: ChatBinding()),
+    GetPage(name: AppRoutes.Chat,
+        page: () => const ChatPage(),
+        binding: ChatBinding()),
 
     GetPage(name: AppRoutes.Photoimgview,
-  page: () => PhotoImageView(), binding: PhotoImageViewBinding()),
+  page: () => const PhotoImageView(),
+        binding: PhotoImageViewBinding()),
   ];
 
 
