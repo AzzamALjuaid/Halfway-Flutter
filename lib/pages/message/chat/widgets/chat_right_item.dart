@@ -21,10 +21,10 @@ Widget ChatRightItem(Msgcontent item){
             padding: EdgeInsets.only(top: 10.w, left: 10.w, right: 10.w),
             decoration:  BoxDecoration(
               gradient: const LinearGradient(colors: [
-                Color.fromARGB(255,176, 106, 231),
-                Color.fromARGB(255,166, 112, 231),
-                Color.fromARGB(255,131, 123, 231),
-                Color.fromARGB(255,104, 132, 231),
+                Color.fromARGB(255,46, 170, 250),
+                Color.fromARGB(255,41, 160, 220),
+                Color.fromARGB(255,35, 120, 220),
+                Color.fromARGB(255,31, 47, 152)
               ],
                 transform: GradientRotation(90),
             ),

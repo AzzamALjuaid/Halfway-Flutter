@@ -14,10 +14,10 @@ AppBar transparentAppBar({
     flexibleSpace: Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(colors: [
-          Color.fromARGB(255, 176, 106, 231),
-          Color.fromARGB(255, 166, 112, 232),
-          Color.fromARGB(255, 131, 123, 232),
-          Color.fromARGB(255, 104, 132, 231),
+          Color.fromARGB(255,46, 170, 250),
+          Color.fromARGB(255,41, 160, 220),
+          Color.fromARGB(255,35, 120, 220),
+          Color.fromARGB(255,31, 47, 152)
         ],transform: GradientRotation(90)),
       ),
     ),

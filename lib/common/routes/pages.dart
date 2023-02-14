@@ -48,7 +48,7 @@ class AppPages {
       ],
     ),
 
-    GetPage(name: AppRoutes.Contact,
+    GetPage(name: AppRoutes.Map,
         page: () => const MapPage(),
         binding: MapBinding()),
 
