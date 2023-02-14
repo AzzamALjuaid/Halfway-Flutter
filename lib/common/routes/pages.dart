@@ -1,4 +1,5 @@
 
+import 'package:firebase_chat/pages/map/index.dart';
 import 'package:firebase_chat/pages/message/photoview/index.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_chat/common/middlewares/middlewares.dart';
@@ -47,6 +48,9 @@ class AppPages {
       ],
     ),
 
+    GetPage(name: AppRoutes.Contact,
+        page: () => const MapPage(),
+        binding: MapBinding()),
 
     // 最新路由
     // 首页

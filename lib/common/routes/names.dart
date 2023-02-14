@@ -4,6 +4,7 @@ class AppRoutes {
   static const NotFound = '/not_found';
 
   static const Application = '/application';
+  static const Map = '/map';
   //contact
   static const Contact = '/contact';
   // message

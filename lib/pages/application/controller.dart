@@ -29,8 +29,19 @@ class ApplicationController extends GetxController {
   @override
   void onInit(){
     super.onInit();
-    tabTitles = ['Chat', 'Contact' , 'Profile'];
+    tabTitles = ['Map', 'Chat', 'Contact' , 'Profile'];
     bottomTabs = <BottomNavigationBarItem>[
+      const BottomNavigationBarItem(
+          icon: Icon(Icons.map_rounded,
+            color: AppColors.thirdElementText,
+          ),
+          activeIcon: Icon(Icons.map_rounded,
+            color: AppColors.secondaryElementText,
+
+          ),
+          label: 'Map',
+          backgroundColor: AppColors.primaryBackground
+      ),
       const BottomNavigationBarItem(
           icon: Icon(Icons.message,
           color: AppColors.thirdElementText,

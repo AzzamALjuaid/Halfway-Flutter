@@ -5,6 +5,7 @@ import 'package:firebase_chat/pages/profile/index.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../map/view.dart';
 import 'controller.dart';
 
 class ApplicationPage extends GetView<ApplicationController> {
@@ -18,6 +19,7 @@ class ApplicationPage extends GetView<ApplicationController> {
         controller: controller.pageController,
         onPageChanged: controller.handlePageChanged,
         children: [
+          MapPage(),
           MessagePage(),
           ContactPage(),
           ProfilePage(),
