@@ -61,7 +61,7 @@ class ApplicationController extends GetxController {
             color: AppColors.secondaryElementText,
 
           ),
-          label: 'Contact',
+          label: 'Profile',
           backgroundColor: AppColors.primaryBackground
       )
 

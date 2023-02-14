@@ -36,7 +36,7 @@ class SignInPage extends GetView<SignInController> {
                   )),
                   Positioned(
                       child: Image.asset(
-                    "assets/images/ic_launcher.png",
+                    "assets/icons/halfway_icon.png",
                     width: 76.w,
                     height: 76.w,
                     fit: BoxFit.cover,
