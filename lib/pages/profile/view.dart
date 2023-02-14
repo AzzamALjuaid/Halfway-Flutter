@@ -2,6 +2,7 @@ import 'package:firebase_chat/common/entities/entities.dart';
 import 'package:firebase_chat/common/values/colors.dart';
 import 'package:firebase_chat/common/widgets/app.dart';
 import 'package:firebase_chat/pages/profile/controller.dart';
+import 'package:firebase_chat/pages/profile/widgets/head_item.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -27,7 +28,11 @@ class ProfilePage extends GetView<ProfileController> {
       margin: EdgeInsets.only(bottom: 1.w),
       padding: EdgeInsets.only(top: 0.w, left: 15.w, right: 15.w),
       child: InkWell(
-        onTap: () {},
+        onTap: () {
+          if(item.route=="/logout"){
+            controller.onLogOut();
+          }
+        },
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -81,6 +86,15 @@ class ProfilePage extends GetView<ProfileController> {
       appBar: _buildAppbar(),
       body: Obx(() => CustomScrollView(
             slivers: [
+              SliverPadding(padding: EdgeInsets.symmetric(
+                vertical: 0.w, horizontal: 0.w
+              ),
+                sliver: SliverToBoxAdapter(
+                  child: controller.state.head_detail.value==null
+                      ?Container()
+                      :HeadItem(controller.state.head_detail.value!),
+                ),
+              ),
               SliverPadding(
                 padding: EdgeInsets.symmetric(vertical: 0.w, horizontal: 0.w),
                 sliver: SliverList(

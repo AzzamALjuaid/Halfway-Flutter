@@ -30,7 +30,7 @@ class ChatController extends GetxController {
     final pickedFile = await _picker.pickImage(source: ImageSource.gallery);
     if(pickedFile!=null){
       _photo = File(pickedFile.path);
-
+      uploadFile();
     }else{
       print("No image selected");
     }
@@ -72,7 +72,8 @@ class ChatController extends GetxController {
     final fileName = getRandomString(15)+extension(_photo!.path);
     try{
       final ref = FirebaseStorage.instance.ref("chat").child(fileName);
-      await ref.putFile(_photo!).snapshotEvents.listen((event) async {
+
+      ref.putFile(_photo!).snapshotEvents.listen((event) async {
         switch(event.state){
           case TaskState.running:
             break;
@@ -82,6 +83,7 @@ class ChatController extends GetxController {
           case TaskState.success:
             String imgUrl = await getImgUrl(fileName);
             sendImageMessage(imgUrl);
+            break;
         }
 
       });

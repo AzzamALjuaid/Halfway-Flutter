@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:firebase_chat/common/entities/entities.dart';
+import 'package:firebase_chat/common/routes/names.dart';
 import 'package:firebase_chat/common/store/store.dart';
 import 'package:firebase_chat/pages/profile/state.dart';
 import 'package:get/get.dart';
@@ -21,6 +22,12 @@ class ProfileController extends GetxController{
       UserLoginResponseEntity userdata = UserLoginResponseEntity.fromJson(jsonDecode(profile));
       state.head_detail.value = userdata;
     }
+  }
+
+  Future<void> onLogOut() async {
+    UserStore.to.onLogout();
+    await _googleSignIn.signOut();
+    Get.offAndToNamed(AppRoutes.SIGN_IN);
   }
 
   @override
