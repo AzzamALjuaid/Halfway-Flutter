@@ -23,7 +23,7 @@ class ChatPage extends GetView<ChatController> {
             Color.fromARGB(255,46, 170, 250),
             Color.fromARGB(255,41, 160, 220),
             Color.fromARGB(255,35, 120, 220),
-            Color.fromARGB(255,31, 47, 152),
+            Color.fromARGB(255,33, 100, 200),
           ],
             transform: GradientRotation(90)
           )
@@ -66,8 +66,8 @@ class ChatPage extends GetView<ChatController> {
               child: Row(
                 children: [
                   SizedBox(
-                    width: 140.w,
-                    height: 44.w,
+                    width: 180.w,
+                    height: 41.w,
                     child: GestureDetector(
                       onTap: (){
 
@@ -96,7 +96,7 @@ class ChatPage extends GetView<ChatController> {
                                 fontFamily: 'Avenger',
                                 fontWeight: FontWeight.normal,
                                 color: AppColors.primaryBackground,
-                                fontSize: 12.sp
+                                fontSize: 12.sp,
                             ),
                           )
                           )
@@ -172,14 +172,28 @@ class ChatPage extends GetView<ChatController> {
                            autofocus: false,
                            focusNode: controller.contentNode,
                            decoration: const InputDecoration(
-                             hintText: "Send messages..."
+                             hintText: " Send messages...",
                            ),
                          ),
                        ),
                        Container(
                          height: 30.h,
                          width: 30.w,
-                         margin: EdgeInsets.only(left: 5.w),
+                         margin: EdgeInsets.only(left: 0.w),
+                         child: GestureDetector(
+                           child: Icon(
+                             Icons.location_on_outlined,
+                             size: 35.w,
+                             color: Colors.blue,
+                           ),
+                           onTap: (){
+                           },
+                         ),
+                       ),
+                       Container(
+                         height: 30.h,
+                         width: 30.w,
+                         margin: EdgeInsets.only(left: 3.w),
                          child: GestureDetector(
                            child: Icon(
                              Icons.photo_outlined,
@@ -192,7 +206,7 @@ class ChatPage extends GetView<ChatController> {
                          ),
                        ),
                        Container(
-                         margin: EdgeInsets.only(left: 10.w,top: 5.h),
+                         margin: EdgeInsets.only(left: 8.w,top: 2.h),
                          width: 65.w,
                          height: 35.w,
                          child: ElevatedButton(
@@ -201,8 +215,7 @@ class ChatPage extends GetView<ChatController> {
                              controller.sendMessage();
                            },
                          ),
-                       )
-
+                       ),
                      ],
                    ),
                   ),

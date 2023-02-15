@@ -98,7 +98,7 @@ class MessageList extends GetView<MessageController> {
                             fontFamily: "Avenir",
                             fontWeight: FontWeight.bold,
                             color: AppColors.thirdElement,
-                            fontSize: 16.sp
+                            fontSize: 18.sp
                           ),
                         ),
                         Text(
@@ -133,7 +133,7 @@ class MessageList extends GetView<MessageController> {
                               fontFamily: "Avenger",
                               fontWeight: FontWeight.normal,
                               color: AppColors.thirdElementText,
-                              fontSize: 12.sp
+                              fontSize: 13.sp
                           ),
                         ),
                       ],

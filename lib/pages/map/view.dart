@@ -8,6 +8,7 @@ import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import '../../common/widgets/app.dart';
+import 'package:location/location.dart';
 
 class MapPage extends GetView<MapController> {
 
@@ -31,7 +32,8 @@ class MapPage extends GetView<MapController> {
       appBar: _buildAppbar(),
       body: GoogleMap(
         initialCameraPosition: CameraPosition(
-          target: LatLng(37.43296265331129, 122.08832357078792),
+          target: LatLng(21.281981, 40.423941),
+          zoom: 10.14,
         ),
       )
     );

@@ -26,7 +26,7 @@ Widget ChatLeftItem(Msgcontent item){
                       Color.fromARGB(255,46, 170, 250),
                       Color.fromARGB(255,41, 160, 220),
                       Color.fromARGB(255,35, 120, 220),
-                      Color.fromARGB(255,31, 47, 152)
+                      Color.fromARGB(255,31, 120, 215)
                     ],
                       transform: GradientRotation(90),
                     ),

@@ -156,7 +156,6 @@ class ChatController extends GetxController {
     onError: (error)=>print("Listen failed: $error")
     );
 
-
     getLocation();
   }
 

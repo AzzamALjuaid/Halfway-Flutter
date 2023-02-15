@@ -79,14 +79,19 @@ class SignInPage extends GetView<SignInController> {
               ),
             ),
             Padding(padding: EdgeInsets.only(
-              top: 30.h, left: 50.w, right: 50.w
+              top: 20.h, left: 50.w, right: 50.w , bottom: 60.w
             ),
               child: btnFlatButtonWidget(
                   onPressed: (){controller.handleSignIn();},
-              width: 200.w,
-              height: 55.h,
+              width: 150.w,
+              height: 50.h,
               title: "Google Login"),
-            )
+            ),
+             btnFlatButtonWidget(
+                onPressed: (){controller.handleSignIn();},
+                width: 150.w,
+                height: 50.h,
+                title: "Register"),
           ],
         ),
       );

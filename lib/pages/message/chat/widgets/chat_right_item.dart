@@ -24,7 +24,7 @@ Widget ChatRightItem(Msgcontent item){
                 Color.fromARGB(255,46, 170, 250),
                 Color.fromARGB(255,41, 160, 220),
                 Color.fromARGB(255,35, 120, 220),
-                Color.fromARGB(255,31, 47, 152)
+                Color.fromARGB(255,31, 120, 215)
               ],
                 transform: GradientRotation(90),
             ),
@@ -32,7 +32,7 @@ Widget ChatRightItem(Msgcontent item){
           ),
             child: item.type=="text"?Text("${item.content}"):
               ConstrainedBox(constraints: BoxConstraints(
-                  maxWidth: 90.w,
+                  maxWidth: 100.w,
               ),
                 child: GestureDetector(
                   onTap: (){
