@@ -1,16 +1,37 @@
-# firebase_chat
+# Halfway_Flutter
 
-A new Flutter project.
+# WelcomePage:
 
-## Getting Started
+https://user-images.githubusercontent.com/92253516/219295218-aea6e1eb-3454-47fa-9daa-f9d84fc63854.MP4
 
-This project is a starting point for a Flutter application.
+# LoginPage:
 
-A few resources to get you started if this is your first Flutter project:
+https://user-images.githubusercontent.com/92253516/219295476-65615508-d352-4a7e-b965-294a6a87247b.mp4
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+# HomePages:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+https://user-images.githubusercontent.com/92253516/219295706-188b5bcf-fd61-4eb3-a8d4-0d9499c253b9.mp4
+
+# Firebase Chat:
+- with image sharing and image preview.
+- send location.
+
+# Chat:
+
+https://user-images.githubusercontent.com/92253516/219297035-63955071-50e7-459a-bcac-7761cdcadf69.mp4
+
+- Location:
+
+![location](https://user-images.githubusercontent.com/92253516/219297660-1b4c8db2-9920-402b-90d1-c6c4b107d828.jpg)
+
+It Show the other user current location:
+
+![chat loction](https://user-images.githubusercontent.com/92253516/219297693-bbcce22d-3763-4202-ac9d-99865f2fb501.jpg)
+
+- image preview:
+
+
+https://user-images.githubusercontent.com/92253516/219298197-54e6dd1d-519b-48da-95d8-3666e61fd6ef.mp4
+
+
+
