@@ -24,14 +24,19 @@ https://user-images.githubusercontent.com/92253516/219297035-63955071-50e7-459a-
 
 ![location](https://user-images.githubusercontent.com/92253516/219297660-1b4c8db2-9920-402b-90d1-c6c4b107d828.jpg)
 
-It Show the other user current location:
+It's Show the other user current location:
 
 ![chat loction](https://user-images.githubusercontent.com/92253516/219297693-bbcce22d-3763-4202-ac9d-99865f2fb501.jpg)
 
 - image preview:
+and save the image to firesore Storage
 
 
-https://user-images.githubusercontent.com/92253516/219298197-54e6dd1d-519b-48da-95d8-3666e61fd6ef.mp4
+
+https://user-images.githubusercontent.com/92253516/219311396-1652f1af-fbff-4fcf-9c38-55e3834f02a9.mp4
+
+
+
 
 
 
