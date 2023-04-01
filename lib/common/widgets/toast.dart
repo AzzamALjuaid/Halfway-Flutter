@@ -4,13 +4,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 Future<bool?> toastInfo({
   required String msg,
-  Color backgroundColor = Colors.black,
-  Color textColor = Colors.white,
+  Color backgroundColor = Colors.white,
+  Color textColor = Colors.blue,
 }) {
   return Fluttertoast.showToast(
     msg: msg,
     toastLength: Toast.LENGTH_SHORT,
-    gravity: ToastGravity.TOP,
+    gravity: ToastGravity.BOTTOM,
     timeInSecForIosWeb: 2,
     backgroundColor: backgroundColor,
     textColor: textColor,
